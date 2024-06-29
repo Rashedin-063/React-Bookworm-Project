@@ -32,7 +32,7 @@ const Nav = () => {
       </li>
       <li>
         <NavLink
-          to='/about'
+          to='/listed'
           className={({ isActive }) =>
             isActive
               ? 'border-2 border-green-500 px-3 py-1 rounded text-green-500 font-semibold'
@@ -44,14 +44,14 @@ const Nav = () => {
       </li>
       <li>
         <NavLink
-          to='/about'
+          to='/pages'
           className={({ isActive }) =>
             isActive
               ? 'border-2 border-green-500 px-3 py-1 rounded text-green-500 font-semibold'
               : 'font-semibold hover:border-b-2 border-b-green-600'
           }
         >
-          Pages to Read
+          Read Pages
         </NavLink>
       </li>
       <li>
@@ -68,11 +68,11 @@ const Nav = () => {
       </li>
       <li>
         <NavLink
-          to='/about'
+          to='/contact'
           className={({ isActive }) =>
             isActive
               ? 'border-2 border-green-500 px-3 py-1 rounded text-green-500 font-semibold'
-              : 'font-semibold hover:border-b-2 border-b-green-600'
+              : 'font-semibold hover:border-b-2 hover:border-b-green-600'
           }
         >
           Contact
@@ -83,7 +83,7 @@ const Nav = () => {
 
 
   return (
-    <div className='navbar rounded-md sticky'>
+    <div className='navbar rounded-md sticky mt-4'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden mt-1'>
@@ -104,7 +104,7 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className=' dropdown-content rounded-box z-[1] mt-3 ml-4 flex flex-col gap-2'
+            className=' dropdown-content rounded-box z-[1] mt-3 ml-4 flex flex-col gap-2 bg-gray-200 shadow-xl w-40 pl-8 py-4'
           >
             {link}
           </ul>
@@ -115,7 +115,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className='navbar-center hidden lg:flex'>
-        <ul className='flex gap-3 px-1'>{link}</ul>
+        <ul className='flex gap-4 px-1 text-lg'>{link}</ul>
       </div>
       <div className='navbar-end mr-4 flex gap-2 mt-2'>
         <a className='bg-[#0ba803] px-3 py-2 rounded-md text-white hover:bg-[#59C6D2]'>
