@@ -234,19 +234,6 @@
     "yearOfPublishing": 1998
   },
   {
-    "id": 18,
-    "bookName": "City Of Bones",
-    "author": "Charli Chapline",
-    "image": "https://i.ibb.co/BgYBjsZ/City-Of-Bones.jpg",
-    "review": "medium for recording information in the form of writing or images. ",
-    "totalPages": 310,
-    "rating": 4.07,
-    "category": "Fiction",
-    "tags": ["Magic", "Demons"],
-    "publisher": "Margaret K.",
-    "yearOfPublishing": 2007
-  },
-  {
     "id": 19,
     "bookName": "The Catcher in the Rye",
     "author": "J.D. Salinger",

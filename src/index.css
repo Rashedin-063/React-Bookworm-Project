@@ -12,3 +12,28 @@
 .font-playfair{
   font-family: "Playfair Display", serif
 }
+
+/* custom style */
+.primary-bg{
+  background-color:   #077701;
+}
+
+.secondary-bg{
+  background-color: #59C6D2;
+}
+
+.hover-primary:hover{
+   background-color: #59C6D2;
+}
+
+.hover-secondary:hover{
+  background-color:   #078100;
+}
+
+.banner-bg{
+  background-color: #8ca49f;
+}
+
+.text-primary{
+  color: #078100;
+}
