@@ -17,7 +17,7 @@ const Book = ({ book }) => {
        <p className='space-x-4 mt-2 text-center'>
          {tags.map((tag) => (
            <span
-             className='bg-[#99b2960c] px-2 py-1 text-primary rounded-lg'
+             className='bg-[#99b2960c] px-2 py-1 text-primary rounded-lg font-work-sans'
              key={tag}
            >
              #{tag}
@@ -27,10 +27,10 @@ const Book = ({ book }) => {
        <h2 className='mt-2 text-2xl font-bold max-w-xs text-center'>
          {bookName}
        </h2>
-       <p className='mt-1 font-medium text-center'>Author : {author}</p>
+       <p className='mt-1 font-medium text-center font-work-sans'>Author : {author}</p>
        <hr className='border-dashed my-2' />
        <div className='flex items-center justify-between px-5'>
-         <div className='flex items-center gap-1'>
+         <div className='flex items-center gap-1 font-work-sans'>
            <BiSolidCategory />
            <p>{category}</p>
          </div>

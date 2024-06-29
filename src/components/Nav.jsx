@@ -84,7 +84,7 @@ const Nav = () => {
 
 
   return (
-    <div className='navbar bg-base-100 rounded-md pt-4 font-work-sans max-w-7xl fixed z-20'>
+    <div className='navbar bg-base-100 rounded-md pt-4 lg:pt-8 font-work-sans max-w-7xl fixed z-20'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div
