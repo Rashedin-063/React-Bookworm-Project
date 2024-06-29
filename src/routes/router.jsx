@@ -6,6 +6,7 @@ import ListedBooks from './../pages/ListedBooks';
 import ReadPages from './../pages/ReadPages';
 import About from './../pages/About';
 import Contact from './../pages/Contact';
+import BookDetails from "../components/BookDetails";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path: '/book/:bookId',
+        element: <BookDetails></BookDetails>,
+        loader: async() => await fetch('./bookData.json')
       }
     ]
   },

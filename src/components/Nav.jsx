@@ -84,7 +84,7 @@ const Nav = () => {
 
 
   return (
-    <div className='navbar rounded-md sticky mt-4 font-work-sans '>
+    <div className='navbar bg-base-100 rounded-md pt-4 font-work-sans max-w-7xl fixed z-20'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div
@@ -152,7 +152,7 @@ const Nav = () => {
       <div className='navbar-center hidden lg:flex'>
         <ul className='flex gap-4 px-1 text-lg'>{link}</ul>
       </div>
-      <div className='navbar-end mr-4 flex gap-2 mt-2'>
+      <div className='navbar-end flex gap-2 mt-2 mr-4 md:mr-16'>
         <div className='gap-2 flex'>
           <Button label='Sign In' type='primary'></Button>
           <Button type='secondary' label='Sign Up'></Button>
