@@ -83,10 +83,14 @@ const Nav = () => {
 
 
   return (
-    <div className='navbar rounded-md sticky mt-4'>
+    <div className='navbar rounded-md sticky mt-4 font-work-sans'>
       <div className='navbar-start'>
         <div className='dropdown'>
-          <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden mt-1'>
+          <div
+            tabIndex={0}
+            role='button'
+            className='btn btn-ghost lg:hidden mt-1'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='h-8 w-8'
@@ -127,7 +131,8 @@ const Nav = () => {
         {/* theme controller */}
         <label className='swap swap-rotate'>
           {/* this hidden checkbox controls the state */}
-          <input onChange={handleTheme}
+          <input
+            onChange={handleTheme}
             type='checkbox'
             className='theme-controller'
             value='synthwave'
