@@ -22,7 +22,7 @@ const ListedBookCard = ({ book }) => {
     <div className='rounded-xl bg-base-100 border-2 lg:p-[32px] py-4 flex items-center justify-between mx-2 lg:mx-0 font-work-sans shadow-lg'>
       <div className='flex flex-col lg:flex-row items-center justify-center gap-8'>
         {/* cover image */}
-        <figure className='bg-gray-200 lg:w-56 w-3/4  rounded-md lg:px-14 lg:py-8'>
+        <figure className='bg-gray-200 lg:w-56 w-3/4  rounded-md lg:px-14 lg:py-8 mx-auto max-w-xl'>
           <img src={image} className='lg:w-full rounded-xl' />
         </figure>
         {/* book info */}

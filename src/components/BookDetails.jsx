@@ -32,13 +32,15 @@ const BookDetails = () => {
   } = book;
   return (
     <div className='flex flex-col lg:flex-row lg:items-start gap-12 mt-8 lg:mt-16 mb-4 lg:mb-12 mx-2 lg:mx-0 font-work-sans'>
-      <div className='h-[600px] w-[500px] mx-auto lg:w-[1500px] lg:h-[580px] p-8 bg-gray-200 rounded-lg shadow-xl'>
+      {/* cover image */}
+      <div className='w-90 h-96 md:h-[600px] md:w-[500px] mx-auto lg:min-w-[400px] lg:max-w-[800px] lg:h-[580px] p-8 bg-gray-200 rounded-lg shadow-xl'>
         <img
           className='rounded-3xl w-full h-full'
           src={image}
           alt={`The cover image of ${bookName}`}
         />
       </div>
+      {/* book info */}
       <div className='mx-4 lg:mx-0 lg:h-[80vh] flex flex-col justify-center relative lg:static'>
         <h2 className='font-bold text-4xl mb-4 font-playfair'>{bookName}</h2>
 
@@ -87,7 +89,8 @@ const BookDetails = () => {
             <p>{rating}</p>
           </div>
         </div>
-        <div className='space-x-4 mt-7 flex justify-center lg:justify-start absolute lg:static top-8 right-5'>
+        {/* button */}
+        <div className='space-x-2 md:space-x-4 mt-4 md:mt-7 flex justify-center lg:justify-start absolute lg:static top-24 right-0 md:top-8 md:right-5'>
           <Link onClick={() => handleReadNow(id)}>
             <Button label='Read Now' type='primary'></Button>
           </Link>

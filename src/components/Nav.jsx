@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
+import Logo from '/logo.png'
 
 const Nav = () => {
 
@@ -40,7 +41,7 @@ const Nav = () => {
               : 'font-semibold hover:border-b-2 border-b-green-600'
           }
         >
-          Listed Books
+          History
         </NavLink>
       </li>
       <li>
@@ -52,7 +53,7 @@ const Nav = () => {
               : 'font-semibold hover:border-b-2 border-b-green-600'
           }
         >
-          Read Pages
+         Read Pages
         </NavLink>
       </li>
       <li>
@@ -85,12 +86,13 @@ const Nav = () => {
 
   return (
     <div className='navbar bg-base-100 rounded-md pt-4 lg:pt-8 font-work-sans max-w-7xl fixed z-20'>
-      <div className='navbar-start'>
+      <div className='navbar-start -ml- lg:-ml-0'>
+        {/* dropdown */}
         <div className='dropdown'>
           <div
             tabIndex={0}
             role='button'
-            className='btn btn-ghost lg:hidden mt-1 relative'
+            className='btn btn-ghost hover:bg-transparent lg:hidden relative hover:scale-110'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -112,7 +114,7 @@ const Nav = () => {
             className=' dropdown-content rounded-box z-[1] mt-3 ml-4 flex flex-col gap-2 bg-slate-500 shadow-xl w-40 pl-8 pt-6 pb-4'
           >
             {/* theme controler */}
-            <div className="absolute right-0 top-0">
+            <div className='absolute right-0 top-0'>
               <label className='swap swap-rotate'>
                 {/* this hidden checkbox controls the state */}
                 <input
@@ -144,8 +146,13 @@ const Nav = () => {
             {link}
           </ul>
         </div>
-        <Link to='/' className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer'>
-          Book
+        {/* logo */}
+        <Link
+          to='/'
+          className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer flex items-center -ml-3 lg:-ml-0'
+        >
+          <img src={Logo} className='w-6 md:w-7 -mt-1 lg:w-8 hidden md:block' />
+          <span> Book</span>
           <span className='text-primary'>Worm</span>
         </Link>
       </div>

@@ -1,15 +1,16 @@
-import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLoaderData } from 'react-router-dom';
 import { getReadBooks, getWishList } from '../utilities';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const BookContext = createContext('');
 export const WishContext = createContext('');
 
 const ListedBooks = () => {
   const books = useLoaderData();
-
   const [tabIndex, setTabIndex] = useState(0);
+  const [displayBooks, setDisplayBooks] = useState([]);
+  const [ displayWishlist, setDisplayWishlist] = useState([])
 
   //get books from LS
   const readBookIds = getReadBooks();
@@ -20,8 +21,49 @@ const ListedBooks = () => {
   const wishlistBooks = books.filter((book) =>
     wishlistBookIds.includes(book.id)
   );
+ 
+  useEffect(() => {
+    setDisplayBooks(readBooks);
+    setDisplayWishlist(wishlistBooks);
+  },[])
 
-  console.log(wishlistBooks)
+  // handle filter
+  const handleFilter = (filter) => {
+    if (filter === 'rating') {
+    const  ratingSortBooks = readBooks.sort((a, b) => {
+        return b.rating - a.rating;
+      }) 
+      setDisplayBooks(ratingSortBooks)
+    const  ratingSortWishlist = wishlistBooks.sort((a, b) => {
+        return b.rating - a.rating;
+      }) 
+      setDisplayWishlist(ratingSortWishlist)
+    
+  }
+     else if (filter === 'pages') {
+    const  pagesSortBooks = readBooks.sort((a, b) => {
+        return b.totalPages - a.totalPages;
+      }) 
+      setDisplayBooks(pagesSortBooks)
+    const  pagesSortWishlist = wishlistBooks.sort((a, b) => {
+        return b.totalPages - a.totalPages;
+      }) 
+      setDisplayWishlist(pagesSortWishlist)
+    
+  }
+     else if (filter === 'year') {
+    const  yearSortBooks = readBooks.sort((a, b) => {
+        return b.yearOfPublishing - a.yearOfPublishing;
+      }) 
+      setDisplayBooks(yearSortBooks)
+    const  yearSortWishlist = wishlistBooks.sort((a, b) => {
+        return b.yearOfPublishing - a.yearOfPublishing;
+      }) 
+      setDisplayWishlist(yearSortWishlist)
+    
+  }
+  
+}
   
 
   return (
@@ -35,15 +77,36 @@ const ListedBooks = () => {
           <summary className='m-1 text-lg font-semibold text-white btn primary-bg hover:bg-primary hover:text-black pr-6 pl-8 lg:-mt-4'>
             Sort By <RiArrowDropDownLine />
           </summary>
-          <ul className='p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 ml-24'>
+          <ul className='p-2 shadow menu dropdown-content z-[1] bg-slate-500 rounded-box  ml-24 font-semibold py-5 w-40 space-y-2'>
             <li>
-              <a>Rating</a>
+              <NavLink
+                className={({isActive}) =>
+                  isActive ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-200'
+                }
+                onClick={() => handleFilter('rating')}
+              >
+                Rating
+              </NavLink>
             </li>
             <li>
-              <a>Number of pages</a>
+              <NavLink
+                className={({isActive}) =>
+                  isActive ? 'bg-blue-500 hover:bg-blue-600' : ''
+                }
+                onClick={() => handleFilter('pages')}
+              >
+                Number of pages
+              </NavLink>
             </li>
             <li>
-              <a>Publisher year</a>
+              <NavLink
+                className={({isActive}) =>
+                  isActive ? 'bg-blue-500 hover:bg-blue-600' : ''
+                }
+                onClick={() => handleFilter('year')}
+              >
+                Publisher year
+              </NavLink>
             </li>
           </ul>
         </details>
@@ -100,8 +163,8 @@ const ListedBooks = () => {
           </span>
         </Link>
       </div>
-      <BookContext.Provider value={readBooks}>
-        <WishContext.Provider value={wishlistBooks}>
+      <BookContext.Provider value={displayBooks}>
+        <WishContext.Provider value={displayWishlist}>
           <Outlet></Outlet>
         </WishContext.Provider>
       </BookContext.Provider>

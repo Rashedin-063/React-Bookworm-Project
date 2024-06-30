@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className='mt-20 lg:mt-36 text-black'>
+    <div className='mt-8 md:mt-20 lg:mt-36 text-black px-4 md:px-0'>
       <div className='flex flex-col text-center w-full mb-8'>
         <h1 className='sm:text-3xl text-3xl font-bold title-font mb-4 text-gray-900'>
           Contact Us

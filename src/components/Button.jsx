@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Button = ({label, type}) => {
   let buttonClass =
-    'px-4 py-2 rounded-md text-white hover:text-black -mt-2 md:-mt-0';
+    'px-4 py-2 rounded-md text-white hover:text-black -mt-2 md:-mt-0 text-sm';
 
   if (type === 'primary') {
     buttonClass += ' primary-bg hover-primary';
