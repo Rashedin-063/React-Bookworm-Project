@@ -2,7 +2,7 @@
 
 const About = () => {
   return (
-    <div className='max-w-lg md: md:max-w-xl lg:max-w-2xl mx-auto mt-12 space-y-4'>
+    <div className='max-w-md md: md:max-w-xl lg:max-w-2xl mx-auto mt-12 space-y-4 px-2'>
       <h2 className='text-3xl text-center mb-8 font-bold'>About Us</h2>
       <h5 className='text-lg font-semibold'>Welcome to BookWorm</h5>
       <p>
@@ -28,21 +28,24 @@ const About = () => {
         vibrant community:{' '}
         <a
           className='text-blue-800 font-semibold hover:underline'
-          href='www.facebook.com'
+          href='https://www.facebook.com'
+          target='_blank'
         >
           Facebook
         </a>
         ,{' '}
         <a
           className='text-blue-800 font-semibold hover:underline'
-          href='www.facebook.com'
+          href='https://www.twitter.com'
+          target='_blank'
         >
           Twitter
         </a>
         ,{' '}
         <a
           className='text-blue-800 font-semibold hover:underline'
-          href='www.facebook.com'
+          href='https://www.instagram.com'
+          target='_blank'
         >
           Instagram
         </a>{' '}
@@ -50,7 +53,8 @@ const About = () => {
         us an email at{' '}
         <a
           className='text-blue-800 font-bold hover:underline'
-          href='contact@bookworm.com.'
+          href='https://mail.google.com/mail/?view=cm&fs=1&to=rashedinislam.06@gmail.com'
+          target='_blank'
         >
           contact@bookworm.com
         </a>{' '}

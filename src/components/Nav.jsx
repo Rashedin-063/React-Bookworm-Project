@@ -94,7 +94,7 @@ const Nav = () => {
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6 wmd:h-8 md:w-8'
+              className='h-7 w-7 wmd:h-8 md:w-8'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
@@ -144,7 +144,7 @@ const Nav = () => {
             {link}
           </ul>
         </div>
-        <Link to='/' className='text-xl md:text-3xl lg:text-4xl font-bold cursor-pointer'>
+        <Link to='/' className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer'>
           Book
           <span className='text-primary'>Worm</span>
         </Link>

@@ -1,22 +1,22 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
-import Button from "./Button";
-import { saveReadBook, saveWishlist } from "../utilities";
+import { Link, useLoaderData, useParams } from 'react-router-dom';
+import Button from './Button';
+import { saveReadBook, saveWishlist } from '../utilities';
 
 const BookDetails = () => {
   const books = useLoaderData();
-  const { bookId } = useParams(); 
+  const { bookId } = useParams();
   const idInt = parseInt(bookId);
-  
-  const book = books.find(book => book.id === idInt);
 
-  const handleReadNow = id => {
-    saveReadBook(id)
-  }
+  const book = books.find((book) => book.id === idInt);
 
-  const handleWishlist = id => {
-    saveWishlist(id)
-  }
-  
+  const handleReadNow = (id) => {
+    saveReadBook(id);
+  };
+
+  const handleWishlist = (id) => {
+    saveWishlist(id);
+  };
+
   const {
     id,
     image,
@@ -62,7 +62,7 @@ const BookDetails = () => {
           {review}
         </p>
         <p className='space-x-4 mt-4'>
-          <span className='font-bold leading-[26px]'>Tag:</span>
+          <span className='font-bold leading-[24px]'>Tag:</span>
           {tags.map((tag) => (
             <span
               className='bg-[#99b2960c] px-2 py-1 text-primary rounded-lg'
