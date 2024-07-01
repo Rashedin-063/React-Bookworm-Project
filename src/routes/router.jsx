@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: '/listed',
         element: <ListedBooks></ListedBooks>,
-        loader: async () => await fetch('./bookData.json'),
+        loader: async () => await fetch('/bookData.json'),
         children: [
           {
             index: true,
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: '/book/:bookId',
         element: <BookDetails></BookDetails>,
-        loader: async () => await fetch('./bookData.json'),
+        loader: async() => await fetch('/bookData.json'),
       },
     ],
   },

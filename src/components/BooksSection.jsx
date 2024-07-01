@@ -14,9 +14,15 @@ const BooksSection = () => {
 
   useEffect(() => {
     const fetchDetails = async () => {
-      const res = await fetch('./bookData.json');
-      const data = await res.json();
-     setBooks(data)
+     try {
+       const res = await fetch('./bookData.json');
+      
+       const data = await res.json();
+       setBooks(data);
+     } catch (error) {
+      console.log('Error: ', error)
+      
+     }
       
     };
     fetchDetails()

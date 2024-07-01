@@ -41,7 +41,7 @@ const saveWishlist = (id) => {
   if (isExist) {
     Swal.fire({
       title: 'Did you forget?',
-      text: 'You already read this book',
+      text: 'You already read or wished for this book',
       icon: 'question',
     });
     return;

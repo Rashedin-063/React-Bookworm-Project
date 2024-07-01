@@ -83,7 +83,6 @@ const Nav = () => {
     </>
   );
 
-
   return (
     <div className='navbar bg-base-100 rounded-md pt-4 lg:pt-8 font-work-sans max-w-7xl fixed z-20'>
       <div className='navbar-start -ml-2 lg:-ml-0'>
@@ -149,7 +148,7 @@ const Nav = () => {
         {/* logo */}
         <Link
           to='/'
-          className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer flex items-center -ml-2 lg:-ml-0'
+          className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer flex gap-2 items-center -ml-2 lg:-ml-0'
         >
           <img src={Logo} className='w-6 md:w-7 -mt-1 lg:w-8 hidden md:block' />
           <span> Book</span>

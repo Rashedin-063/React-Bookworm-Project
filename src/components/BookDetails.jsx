@@ -2,9 +2,12 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Button from './Button';
 import { saveReadBook, saveWishlist } from '../utilities';
 
+
 const BookDetails = () => {
   const books = useLoaderData();
+
   const { bookId } = useParams();
+
   const idInt = parseInt(bookId);
 
   const book = books.find((book) => book.id === idInt);
