@@ -8,7 +8,7 @@ const Book = ({ book }) => {
  return (
    <Link
      to={`/book/${id}`}
-     className='transition duration-150 ease-in hover:scale-[1.02] border-2 hover:border-[#078100] mx-auto p-2 pt-4 flex flex-col justify-center items-center rounded-lg shadow-lg w-96 md:w-[300px] gap-4'
+     className='transition duration-150 ease-in hover:scale-[1.02] border-2 hover:border-[#078100] mx-auto p-2 pt-12 lg:pt-8 pb-6 flex flex-col justify-center items-center rounded-lg shadow-lg w-96 md:w-[300px] gap-4'
    >
      <figure className='px-10 py-5 banner-bg rounded'>
        <img src={image} className='w-[130px] h-[120px] rounded-xl' />
