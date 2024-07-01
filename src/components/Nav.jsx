@@ -41,7 +41,7 @@ const Nav = () => {
               : 'font-semibold hover:border-b-2 border-b-green-600'
           }
         >
-          History
+          Listed Books
         </NavLink>
       </li>
       <li>
@@ -86,7 +86,7 @@ const Nav = () => {
 
   return (
     <div className='navbar bg-base-100 rounded-md pt-4 lg:pt-8 font-work-sans max-w-7xl fixed z-20'>
-      <div className='navbar-start -ml- lg:-ml-0'>
+      <div className='navbar-start -ml-2 lg:-ml-0'>
         {/* dropdown */}
         <div className='dropdown'>
           <div
@@ -149,7 +149,7 @@ const Nav = () => {
         {/* logo */}
         <Link
           to='/'
-          className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer flex items-center -ml-3 lg:-ml-0'
+          className='text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer flex items-center -ml-2 lg:-ml-0'
         >
           <img src={Logo} className='w-6 md:w-7 -mt-1 lg:w-8 hidden md:block' />
           <span> Book</span>
@@ -159,7 +159,7 @@ const Nav = () => {
       <div className='navbar-center hidden lg:flex'>
         <ul className='flex gap-4 px-1 text-lg'>{link}</ul>
       </div>
-      <div className='navbar-end flex gap-2 mt-2 mr-4 md:mr-16'>
+      <div className='navbar-end flex gap-2 mt-2 mr-6 md:mr-16'>
         <div className='gap-2 flex'>
           <Button label='Sign In' type='primary'></Button>
           <Button type='secondary' label='Sign Up'></Button>

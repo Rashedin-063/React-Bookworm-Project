@@ -44,26 +44,26 @@ const BookDetails = () => {
       <div className='mx-4 lg:mx-0 lg:h-[80vh] flex flex-col justify-center relative lg:static'>
         <h2 className='font-bold text-4xl mb-4 font-playfair'>{bookName}</h2>
 
-        <p>
+        <div>
           Author:{' '}
           <span className='text-[#424242] text-xl font-medium mt-3'>
             {author}
           </span>
-        </p>
-        <p>
+        </div>
+        <div>
           <hr className='my-3' />
           Category:{' '}
           <span className='text-[#424242] text-xl font-medium'>
             {category}
           </span>{' '}
-        </p>
+        </div>
 
         <hr className='my-3' />
-        <p className='text-[#424242] leading-[24px]'>
+        <div className='text-[#424242] leading-[24px]'>
           <span className='text-black font-bold'>Review : </span>
           {review}
-        </p>
-        <p className='space-x-4 mt-4'>
+        </div>
+        <div className='space-x-4 mt-4'>
           <span className='font-bold leading-[24px]'>Tag:</span>
           {tags.map((tag) => (
             <span
@@ -73,7 +73,7 @@ const BookDetails = () => {
               #{tag}
             </span>
           ))}
-        </p>
+        </div>
         <hr className='my-4' />
         <div className='flex lg:gap-16 gap-4 leading-[38px]'>
           <div className='text-[#424242]'>
