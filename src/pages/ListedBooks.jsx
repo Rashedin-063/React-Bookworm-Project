@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLoaderData } from 'react-router-dom';
 import { getReadBooks, getWishList } from '../utilities';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { createContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export const BookContext = createContext('');
 export const WishContext = createContext('');
@@ -68,6 +69,11 @@ const ListedBooks = () => {
 
   return (
     <div className='mx-4 lg:mx-0'>
+      <Helmet>
+        <title>
+          BookWorm | Books
+        </title>
+      </Helmet>
       <h2 className='text-[28px] font-bold text-center banner-bg rounded-xl py-6 mt-8 lg:mt-16 mx-2 lg:mx-0'>
         Read & Wishlist Books
       </h2>

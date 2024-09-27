@@ -12,6 +12,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { getReadBooks } from '../utilities';
+import { Helmet } from 'react-helmet-async';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -48,6 +49,11 @@ const ReadPages = () => {
 
   return (
     <div className='mr-4 ml-1 md:mr-0 md:ml-0 h-[85vh] flex items-center'>
+      <Helmet>
+        <title>
+          BookWorm | Read Pages
+        </title>
+      </Helmet>
       <div
         className='bg-gray-200 px-6 pt-8 pb-24 rounded-2xl'
         style={{ width: '100%', height: 500 }}
