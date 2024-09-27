@@ -3,8 +3,7 @@
 A simple book related webpage created using react & react-router-dom.
 
 # Live Link
-[Visit BookWorm](http://waggish-judge.surge.sh)
-
+waggish-judge.surge.sh
 
 # Features & Characteristics
 -  Get Data from Local Storage 
@@ -13,5 +12,5 @@ A simple book related webpage created using react & react-router-dom.
 -  Context API
 -  Sort By in descending order
 -  Custom Shape Bar Chart using Recharts
--  Fully Responsive for extra large, large, medium, small devices.
+-  Fully Responsive for all devices.
 
