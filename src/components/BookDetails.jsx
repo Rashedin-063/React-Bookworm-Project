@@ -1,6 +1,7 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Button from './Button';
 import { saveReadBook, saveWishlist } from '../utilities';
+import { Helmet } from 'react-helmet-async';
 
 
 const BookDetails = () => {
@@ -35,6 +36,11 @@ const BookDetails = () => {
   } = book;
   return (
     <div className='flex flex-col lg:flex-row lg:items-start gap-12 mt-8 lg:mt-16 mb-4 lg:mb-12 mx-2 lg:mx-0 font-work-sans'>
+      <Helmet>
+        <title>
+        { ` BookDetails | Book ${id}`}
+        </title>
+      </Helmet>
       {/* cover image */}
       <div className='w-90 h-96 md:h-[600px] md:w-[500px] mx-auto lg:min-w-[400px] lg:max-w-[800px] lg:h-[580px] p-8 bg-gray-200 rounded-lg shadow-xl'>
         <img
